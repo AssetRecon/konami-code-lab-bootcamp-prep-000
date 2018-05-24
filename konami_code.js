@@ -11,18 +11,17 @@ const codes = [
   "a"
 ];
 
-
-index = 0
-body = document.getElementByID('body')
+var index = 0;
+var body = document.querySelector('body');
 function init() {
   body.addEventListener('keydown',function(e) {
-    if (e.which === codes[index]) {
-      index++
+    if (e.key === codes[index]) {
+      index++;
        if (index===codes.length) {
-         alert("You did it!")
-         index = 0
+         alert("You did it!");
+         index = 0;
        }
     } else {
-      index = 0
+      index = 0;
     }
   })}
